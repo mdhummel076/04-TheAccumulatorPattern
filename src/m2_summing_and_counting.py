@@ -119,8 +119,8 @@ def sum_more_cosines(m, n):
     import math
 
     total = 0
-    for k in range(m,n+1):
-        total = total + math.cos(k)
+    for k in range(n+1-m):
+        total = total + math.cos(k+m)
     return total
 
 def run_test_count_sines_from():
@@ -211,8 +211,8 @@ def count_sines_from(m, n):
     import math
 
     count = 0
-    for k in range(m,n+1):
-        if math.sin(k) < 0.5:
+    for k in range(n+1-m):
+        if math.sin(k+m) < 0.5:
             count = count + 1
     return count
 
@@ -310,8 +310,8 @@ def count_sines_vs_cosines(m):
 
     count = 0
 
-    for k in range(-m,m+1):
-        if math.sin(k)>math.cos(k):
+    for k in range(m*2+1):
+        if math.sin(k-m)>math.cos(k-m):
             count = count + 1
     return count
 

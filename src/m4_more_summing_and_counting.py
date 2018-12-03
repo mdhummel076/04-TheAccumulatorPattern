@@ -125,8 +125,8 @@ def sum_from(m, n):
     #   of the RANGE expression, if you happen to know them.
     # -------------------------------------------------------------------------
     total = 0
-    for k in range(m, n+1):
-        total = total + k
+    for k in range(n+1-m):
+        total = total + (k+m)
     return total
 
 
@@ -202,8 +202,8 @@ def factorial(n):
     # -------------------------------------------------------------------------
 
     total = 1
-    for k in range(1,n+1):
-        total = total * k
+    for k in range(n):
+        total = total * (k+1)
     return total
 
 
@@ -308,8 +308,8 @@ def count_cosines_from(m, n, x):
     #   of the RANGE expression, if you happen to know them.
     # -------------------------------------------------------------------------
     count = 0
-    for k in range(m,n+1):
-        if math.cos(k)>x:
+    for k in range(n+1-m):
+        if math.cos(k+m)>x:
             count = count + 1
     return count
 
@@ -372,8 +372,8 @@ def sum_unit_fractions_from(m, n):
     # -------------------------------------------------------------------------
 
     total = 0
-    for k in range(m,n+1):
-        total = total + 1/k
+    for k in range(n+1-m):
+        total = total + 1/(k+m)
     return total
 
 # -----------------------------------------------------------------------------
